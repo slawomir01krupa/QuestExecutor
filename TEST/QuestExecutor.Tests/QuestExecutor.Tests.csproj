@@ -21,11 +21,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="QuestExecutor.Api.Tests\" />
+    <Folder Include="QuestExecutor.Api.Tests\Orchestration\" />
     <Folder Include="QuestExecutor.Core.Tests\" />
     <Folder Include="QuestExecutor.Executors.Tests\" />
     <Folder Include="QuestExecutor.Observability.Tests\" />
     <Folder Include="QuestExecutor.Resilience.Tests\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\QuestExecutor.Core\QuestExecutor.Core.csproj" />
+    <ProjectReference Include="..\..\QuestExecutor.Executors\QuestExecutor.Executors.csproj" />
+    <ProjectReference Include="..\..\QuestExecutor.Observability\QuestExecutor.Observability.csproj" />
+    <ProjectReference Include="..\..\QuestExecutor.Resilience\QuestExecutor.Resilience.csproj" />
+    <ProjectReference Include="..\..\QuestExecutor\QuestExecutor.Api.csproj" />
   </ItemGroup>
 
 </Project>
