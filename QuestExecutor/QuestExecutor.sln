@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestExecutor.Api", "QuestExecutor.Api.csproj", "{2C48AE39-D62E-49C5-9E3E-8F0E1A178D92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TESTS", "TESTS", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestExecutor.Tests", "..\TEST\QuestExecutor.Tests\QuestExecutor.Tests.csproj", "{0C5997CD-7027-4DA9-A08A-471E40840F16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestExecutor.Core", "..\QuestExecutor.Core\QuestExecutor.Core.csproj", "{60525649-6847-449A-BD5D-1D7A7784BAD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestExecutor.Executors", "..\QuestExecutor.Executors\QuestExecutor.Executors.csproj", "{44D51514-638E-44A3-87BC-8197C6A889B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestExecutor.Resilience", "..\QuestExecutor.Resilience\QuestExecutor.Resilience.csproj", "{EB2D649F-F492-4A47-A21C-C85FB6BE4139}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestExecutor.Observability", "..\QuestExecutor.Observability\QuestExecutor.Observability.csproj", "{EEEB12C5-A16A-4169-AC62-2F58ADA97325}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C48AE39-D62E-49C5-9E3E-8F0E1A178D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C48AE39-D62E-49C5-9E3E-8F0E1A178D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C48AE39-D62E-49C5-9E3E-8F0E1A178D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C48AE39-D62E-49C5-9E3E-8F0E1A178D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C5997CD-7027-4DA9-A08A-471E40840F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C5997CD-7027-4DA9-A08A-471E40840F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C5997CD-7027-4DA9-A08A-471E40840F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C5997CD-7027-4DA9-A08A-471E40840F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60525649-6847-449A-BD5D-1D7A7784BAD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60525649-6847-449A-BD5D-1D7A7784BAD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60525649-6847-449A-BD5D-1D7A7784BAD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60525649-6847-449A-BD5D-1D7A7784BAD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D51514-638E-44A3-87BC-8197C6A889B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D51514-638E-44A3-87BC-8197C6A889B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D51514-638E-44A3-87BC-8197C6A889B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D51514-638E-44A3-87BC-8197C6A889B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB2D649F-F492-4A47-A21C-C85FB6BE4139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB2D649F-F492-4A47-A21C-C85FB6BE4139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB2D649F-F492-4A47-A21C-C85FB6BE4139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB2D649F-F492-4A47-A21C-C85FB6BE4139}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEEB12C5-A16A-4169-AC62-2F58ADA97325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEEB12C5-A16A-4169-AC62-2F58ADA97325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEB12C5-A16A-4169-AC62-2F58ADA97325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEB12C5-A16A-4169-AC62-2F58ADA97325}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0C5997CD-7027-4DA9-A08A-471E40840F16} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3FB3E4A-DF42-473C-9DAF-4D2802AFE238}
+	EndGlobalSection
+EndGlobal
