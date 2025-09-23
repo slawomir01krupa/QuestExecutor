@@ -12,8 +12,9 @@ using QuestExecutor.Resilience.Policies;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddHttpClient();
 builder.Services.AddControllers();
+builder.Services.AddHttpClient(nameof(HttpExecutor))
+    .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 builder.Services.AddKeyedTransient<IExecutor>("http", (sp, key) =>
     ActivatorUtilities.CreateInstance<HttpExecutor>(sp));
 
