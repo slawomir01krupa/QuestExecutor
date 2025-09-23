@@ -10,8 +10,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuestExecutor.Core\QuestExecutor.Core.csproj" />
+    <ProjectReference Include="..\QuestExecutor.Executors\QuestExecutor.Executors.csproj" />
+    <ProjectReference Include="..\QuestExecutor.Observability\QuestExecutor.Observability.csproj" />
+    <ProjectReference Include="..\QuestExecutor.Resilience\QuestExecutor.Resilience.csproj" />
   </ItemGroup>
 
 </Project>

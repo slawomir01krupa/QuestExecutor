@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\QuestExecutor.Core\QuestExecutor.Core.csproj" />
+    <ProjectReference Include="..\QuestExecutor.Observability\QuestExecutor.Observability.csproj" />
+    <ProjectReference Include="..\QuestExecutor.Resilience\QuestExecutor.Resilience.csproj" />
+  </ItemGroup>
+
 </Project>
