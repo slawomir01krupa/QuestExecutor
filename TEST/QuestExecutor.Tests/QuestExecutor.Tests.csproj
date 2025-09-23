@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -18,6 +18,14 @@
 
   <ItemGroup>
     <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="QuestExecutor.Api.Tests\" />
+    <Folder Include="QuestExecutor.Core.Tests\" />
+    <Folder Include="QuestExecutor.Executors.Tests\" />
+    <Folder Include="QuestExecutor.Observability.Tests\" />
+    <Folder Include="QuestExecutor.Resilience.Tests\" />
   </ItemGroup>
 
 </Project>
