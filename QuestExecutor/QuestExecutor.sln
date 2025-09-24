@@ -19,6 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestExecutor.Observability
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{A7ED831F-3C83-48EF-B94A-0AAC98BB7A9B}"
 	ProjectSection(SolutionItems) = preProject
+		..\SolutionItems\class_diagram.png = ..\SolutionItems\class_diagram.png
 		..\SolutionItems\QuestExecutor API.postman_collection.json = ..\SolutionItems\QuestExecutor API.postman_collection.json
 	EndProjectSection
 EndProject
