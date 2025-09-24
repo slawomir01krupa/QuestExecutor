@@ -96,7 +96,7 @@ namespace QuestExecutor.Api.Controllers
             var result = new ExecutionRequest();
             var request = _httpContextAccessor.HttpContext?.Request;
 
-            result.Path = path;
+            result.Path = $"/{path}";
             result.Query = request?.Query.ToDictionary(q => q.Key, q => q.Value.ToString());
             result.Headers = request?.Headers.ToDictionary(h => h.Key, h => h.Value.ToString());
             result.Target = request?.Headers.GetHeaderValue(HeaderNames.TargetBase) ?? string.Empty;
