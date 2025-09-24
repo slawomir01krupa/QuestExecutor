@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36429.23 d17.14
+VisualStudioVersion = 17.14.36429.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestExecutor.Api", "QuestExecutor.Api.csproj", "{2C48AE39-D62E-49C5-9E3E-8F0E1A178D92}"
 EndProject
@@ -16,6 +16,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestExecutor.Resilience", "..\QuestExecutor.Resilience\QuestExecutor.Resilience.csproj", "{EB2D649F-F492-4A47-A21C-C85FB6BE4139}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestExecutor.Observability", "..\QuestExecutor.Observability\QuestExecutor.Observability.csproj", "{EEEB12C5-A16A-4169-AC62-2F58ADA97325}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{A7ED831F-3C83-48EF-B94A-0AAC98BB7A9B}"
+	ProjectSection(SolutionItems) = preProject
+		..\SolutionItems\QuestExecutor API.postman_collection.json = ..\SolutionItems\QuestExecutor API.postman_collection.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
