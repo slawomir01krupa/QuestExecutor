@@ -18,10 +18,8 @@ builder.Services.AddHttpClient(nameof(HttpExecutor))
     .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 builder.Services.AddKeyedTransient<IExecutor>("http", (sp, key) =>
     ActivatorUtilities.CreateInstance<HttpExecutor>(sp));
-
 builder.Services.AddKeyedTransient<IExecutor>("powershell", (sp, key) =>
     ActivatorUtilities.CreateInstance<PowershellExecutor>(sp));
-
 builder.Services.Configure<ProxyOptions>(builder.Configuration.GetSection("ProxyOptions"));
 builder.Services.AddSingleton<IExecutorRegistry, KeyedExecutorRegistry>();
 builder.Services.AddScoped<IValidator<ExecutionRequest>, ExecutionRequestValidator>();
@@ -33,7 +31,16 @@ builder.Logging.ClearProviders();
 builder.Logging.AddConsole(options => options.FormatterName = "json");
 builder.Logging.AddFilter("Microsoft.AspNetCore", LogLevel.Warning);
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddSwaggerGen();
+    builder.Services.AddHttpClient(nameof(HttpExecutor))
+    .ConfigurePrimaryHttpMessageHandler(() =>
+        new HttpClientHandler
+        {
+            ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
+        });
+}
 
 var app = builder.Build();
 

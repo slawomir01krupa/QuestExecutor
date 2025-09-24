@@ -96,11 +96,14 @@ namespace QuestExecutor.Api.Orchestration
             if (!outcome.Success)
             {
                 envelope.Status = "Failed";
+                stopwatch.Stop();
+                envelope.ExecutionTimeMilliseconds = stopwatch.ElapsedMilliseconds;
                 if (outcome.Error is not null)
                 {
                     envelope.Errors.Add(outcome.Error);
                 }
                 _log.LogWarning(LogEvents.RequestFailure, "Request failed: {message}", outcome.Error);
+                return envelope;
             }
 
             envelope.Status = "Success";
