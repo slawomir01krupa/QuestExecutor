@@ -13,6 +13,7 @@ using QuestExecutor.Resilience.Policies;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddHttpClient(nameof(HttpExecutor))
     .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 builder.Services.AddKeyedTransient<IExecutor>("http", (sp, key) =>
@@ -27,6 +28,7 @@ builder.Services.AddScoped<IValidator<ExecutionRequest>, ExecutionRequestValidat
 builder.Services.AddSingleton<IMetrics, InMemoryMetrics>();
 builder.Services.AddSingleton<IClock, SystemClock>();
 builder.Services.AddSingleton<IPolicyRunner, PollyPolicyRunner>();
+builder.Services.AddScoped<IRequestOrchestrator, RequestOrchestrator>();
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole(options => options.FormatterName = "json");
 builder.Logging.AddFilter("Microsoft.AspNetCore", LogLevel.Warning);
