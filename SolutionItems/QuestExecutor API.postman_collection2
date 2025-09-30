@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "022e6339-dc27-4c9e-9d85-2596a0416d9f",
+		"name": "QuestExecutor API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4627399"
+	},
+	"item": [
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/ping",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Metrics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/metrics",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orchestrator - GET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Target-Base",
+						"value": "https://example.com"
+					},
+					{
+						"key": "X-Correlation-Id",
+						"value": "test-correlation-id"
+					},
+					{
+						"key": "X-Executor-Type",
+						"value": "http"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/test-path?foo=bar",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"test-path"
+					],
+					"query": [
+						{
+							"key": "foo",
+							"value": "bar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orchestrator - GET Mocked enpoint",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Target-Base",
+						"value": "https://postman-echo.com"
+					},
+					{
+						"key": "X-Correlation-Id",
+						"value": "test-correlation-id"
+					},
+					{
+						"key": "X-Executor-Type",
+						"value": "http"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/get",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orchestrator - POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Target-Base",
+						"value": "https://example.com"
+					},
+					{
+						"key": "X-Correlation-Id",
+						"value": "test-correlation-id"
+					},
+					{
+						"key": "X-Executor-Type",
+						"value": "http"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"body\": \"{\\\"key\\\":\\\"value\\\"}\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/test-path",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"test-path"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orchestrator - POST powershell",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Target-Base",
+						"value": "https://example.com"
+					},
+					{
+						"key": "X-Correlation-Id",
+						"value": "test-correlation-id"
+					},
+					{
+						"key": "X-Executor-Type",
+						"value": "powershell"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"body\": \"{\\\"command\\\":\\\"list-mailboxes\\\"}\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/test-path",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"test-path"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orchestrator - PUT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Target-Base",
+						"value": "https://example.com"
+					},
+					{
+						"key": "X-Correlation-Id",
+						"value": "test-correlation-id"
+					},
+					{
+						"key": "X-Executor-Type",
+						"value": "http"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"body\": \"{\\\"key\\\":\\\"value\\\"}\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/test-path",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"test-path"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orchestrator - PATCH",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Target-Base",
+						"value": "https://example.com"
+					},
+					{
+						"key": "X-Correlation-Id",
+						"value": "test-correlation-id"
+					},
+					{
+						"key": "X-Executor-Type",
+						"value": "http"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"body\": \"{\\\"key\\\":\\\"value\\\"}\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/test-path",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"test-path"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orchestrator - DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-Target-Base",
+						"value": "https://example.com"
+					},
+					{
+						"key": "X-Correlation-Id",
+						"value": "test-correlation-id"
+					},
+					{
+						"key": "X-Executor-Type",
+						"value": "http"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/test-path",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"test-path"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:5001"
+		}
+	]
+}
