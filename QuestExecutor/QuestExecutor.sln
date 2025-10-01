@@ -21,8 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\Users\slawo\Desktop\quest assigment\candidate-coding-assignment 1.md = ..\..\..\Users\slawo\Desktop\quest assigment\candidate-coding-assignment 1.md
 		..\SolutionItems\class_diagram.png = ..\SolutionItems\class_diagram.png
-		..\SolutionItems\QuestExecutor API.postman_collection.json = ..\SolutionItems\QuestExecutor API.postman_collection.json
-		..\SolutionItems\QuestExecutor API.postman_collection2 = ..\SolutionItems\QuestExecutor API.postman_collection2
+		..\SolutionItems\QuestExecutor API.postman_collection3 = ..\SolutionItems\QuestExecutor API.postman_collection3
 	EndProjectSection
 EndProject
 Global
