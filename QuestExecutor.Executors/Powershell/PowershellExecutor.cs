@@ -69,14 +69,13 @@ namespace QuestExecutor.Executors.Powershell
                 string username = node["username"]?.GetValue<string>() ?? "your-username";
                 string password = node["password"]?.GetValue<string>() ?? "your-password";
 
-                string portStr = node["port"]?.GetValue<string>();
+                string? portStr = node["port"]?.GetValue<string>();
                 int port = 22;
                 if (!string.IsNullOrWhiteSpace(portStr) && int.TryParse(portStr, out int parsedPort))
                 {
                     port = parsedPort;
                 }
 
-                // Build the PowerShell command string
                 string psCommand = MapCommand(command);
                 if (paramDict.Count > 0)
                 {
